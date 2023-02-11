@@ -43,4 +43,3 @@ receivers:
     auth_password: YOUR_EMAIL_PASSWORD
 ```
 
-#

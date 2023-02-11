@@ -24,4 +24,21 @@ sudo mkdir /var/lib/alertmanager
 rm -rf alertmanager*
 ```
 
-#
+2. Add Alertmanager’s configuration `/etc/prometheus/alertmanager.yml`
+
+/etc/prometheus/alertmanager.yml
+```
+route:
+  group_by: [Alertname]
+  receiver: email-me
+
+receivers:
+- name: email-me
+  email_configs:
+  - to: EMAIL_YO_WANT_TO_SEND_EMAILS_TO
+    from: YOUR_EMAIL_ADDRESS
+    smarthost: smtp.gmail.com:587
+    auth_username: YOUR_EMAIL_ADDRESS
+    auth_identity: YOUR_EMAIL_ADDRESS
+    auth_password: YOUR_EMAIL_PASSWORD
+```

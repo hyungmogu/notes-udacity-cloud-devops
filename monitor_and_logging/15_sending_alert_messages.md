@@ -9,7 +9,7 @@
 
 - NOTE: MAKE SURE TO KEEP ALERTS SIMPLE (ALERT FATIGUE)
 
-## Adding Alertmanager
+## Adding Alert Manager
 
 - 
 

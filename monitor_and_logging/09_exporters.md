@@ -22,3 +22,5 @@
 4. Connect again via SSH to your Prometheus server in EC2.
 5. Configure Prometheus to discover EC2 instances automatically following this tutorial.
 6. View the test EC2 instance in Prometheus.
+
+#

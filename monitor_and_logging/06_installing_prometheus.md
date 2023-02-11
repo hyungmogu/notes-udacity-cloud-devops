@@ -80,24 +80,27 @@ ExecStart=/usr/local/bin/prometheus \
 WantedBy=multi-user.target
 ```
 
-5. Download and extract the Prometheus server files.
+9. change permission of the directories
 
 ```
-wget https://github.com/prometheus/prometheus/releases/download/v2.19.0/prometheus-2.19.0.linux-amd64.tar.gz
-tar xvfz prometheus-2.19.0.linux-amd64.tar.gz
+sudo chown prometheus:prometheus /etc/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/promtool
+sudo chown -R prometheus:prometheus /etc/prometheus/consoles
+sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
+sudo chown -R prometheus:prometheus /var/lib/prometheus
 ```
 
-6. Start Prometheus.
+10. configure systemd
 
 ```
-cd prometheus-2.19.0.linux-amd64;
-./prometheus --config.files=./prometheus.yml
+sudo systemctl daemon-reload
+sudo systemctl enable prometheus
 ```
 
-5. Open the instance's hostname or IP address in your browser with port 9090.
+11. Open the instance's hostname or IP address in your browser with port 9090.
     - In chrome, safari, or firefox type the following:
 
 ```
 <PUBLIC_HOST_NAME_AWS_CONSOLE>:9090/graph
 ```
-

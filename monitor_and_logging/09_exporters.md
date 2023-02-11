@@ -23,3 +23,4 @@
 5. Configure Prometheus to discover EC2 instances automatically following this tutorial.
 6. View the test EC2 instance in Prometheus.
 
+#

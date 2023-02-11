@@ -98,9 +98,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable prometheus
 ```
 
-11. Open the instance's hostname or IP address in your browser with port 9090.
-    - In chrome, safari, or firefox type the following:
-
-```
-<PUBLIC_HOST_NAME_AWS_CONSOLE>:9090/graph
-```
+11. Create Node exporter (see 09_exporters.md)

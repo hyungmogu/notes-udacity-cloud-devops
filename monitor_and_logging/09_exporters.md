@@ -29,12 +29,82 @@
 
     - b. start a session in the new virtual machine
 
-```
-ssh -i <.pem file attached to ec2> ubuntu@<PUBLIC_HOST_FOR_PROMETHEUS_NODE_EXPORTER_INSTANCE>
-```
+    ```
+    ssh -i <.pem file attached to ec2> ubuntu@<PUBLIC_HOST_FOR_PROMETHEUS_NODE_EXPORTER_INSTANCE>
+    ```
+
+    - c. create a user for Prometheus Node Exporter
+
+    ```
+    sudo useradd --no-create-home node_exporter
+    ```
+
+    - d. Install Node Exporter binaries
+
+    ```
+    wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
+    tar xzf node_exporter-1.0.1.linux-amd64.tar.gz
+    sudo cp node_exporter-1.0.1.linux-amd64/node_exporter /usr/local/bin/node_exporter
+    rm -rf node_exporter-1.0.1.linux-amd64.tar.gz node_exporter-1.0.1.linux-amd64
+    ```
+
+    - e. Create `/etc/systemd/system/node-exporter.service` if it doesnt exist
+
+    ```
+    [Unit]
+    Description=Prometheus Node Exporter Service
+    After=network.target
+
+    [Service]
+    User=node_exporter
+    Group=node_exporter
+    Type=simple
+    ExecStart=/usr/local/bin/node_exporter
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+    - f. Configure systemd
+
+    ```
+    sudo systemctl daemon-reload
+    sudo systemctl enable node-exporter
+    sudo systemctl start node-exporter
+    sudo systemctl status node-exporter
+    ```
+
+    - g. To configure prometheus server, start a session in prometheus-server ec2 instance
+
+    ```
+    ssh -i <.pem for prometheus> ubuntu@<PUBLIC_URL_FOR_PROMETHEUS_SERVER_EC2_INSTANCE>
+    ```
+
+    - h. Edit `/etc/prometheus/prometheus.yml` file
+
+    ```
+    global:
+    scrape_interval: 15s
+    external_labels:
+        monitor: 'prometheus'
+
+    scrape_configs:
+
+    - job_name: 'node_exporter'
+
+        static_configs:
+
+        - targets: ['ec2-13-58-127-241.us-east-2.compute.amazonaws.com:9100']
+    ```
+
+    - i. Restart prometheus instance
+
+    ```
+    sudo systemctl restart prometheus
+    ```
 
 4. Connect again via SSH to your Prometheus server in EC2.
-5. Configure Prometheus to discover EC2 instances automatically following this tutorial.
+5. Configure Prometheus to discover EC2 instances automatically following [this]() tutorial.
 6. View the test EC2 instance in Prometheus.
 
 #

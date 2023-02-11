@@ -23,14 +23,4 @@ sudo mkdir /var/lib/alertmanager
 
 rm -rf alertmanager*
 ```
-
-1. Create a file `rule.yml` containing following lines of codes
-
-rule.yml
-```
-groups:
-- name: AllInstances
-  rules:
-  - alert: Instance  
-```
-
+#

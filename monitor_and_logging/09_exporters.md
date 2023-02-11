@@ -103,7 +103,8 @@
     sudo systemctl restart prometheus
     ```
 
-4. Connect again via SSH to your Prometheus server in EC2.
-5. Configure Prometheus to discover EC2 instances automatically following [this]() tutorial.
-6. View the test EC2 instance in Prometheus.
+4. Check. if the prometheus server is running correctly
 
+```
+<PUBLIC_URL_PROMETHEUS_SERVER>:9090/targets
+```

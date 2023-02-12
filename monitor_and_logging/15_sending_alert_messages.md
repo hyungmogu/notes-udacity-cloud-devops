@@ -119,3 +119,4 @@ sudo chown -R prometheus:prometheus /etc/prometheus
 ## References
 
 1. https://codewizardly.com/prometheus-on-aws-ec2-part4/
+

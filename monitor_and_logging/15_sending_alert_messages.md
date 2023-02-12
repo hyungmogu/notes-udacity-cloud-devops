@@ -113,8 +113,47 @@ groups:
 sudo chown -R prometheus:prometheus /etc/prometheus
 ```
 
-8. 
+8. Update Prometheus configuration file
 
+/etc/prometheus/prometheus.yml
+```
+global:
+  scrape_interval: 1s
+  evaluation_interval: 1s
+
+rule_files:
+ - /etc/prometheus/rules.yml
+
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - localhost:9093
+
+scrape_configs:
+  - job_name: 'node'
+    ec2_sd_configs:
+      - region: us-east-1
+        access_key: PUT_THE_ACCESS_KEY_HERE
+        secret_key: PUT_THE_SECRET_KEY_HERE
+        port: 9100
+```
+
+9. Update Prometheus configuration file
+
+```
+sudo systemctl restart prometheus
+```
+
+10. Test it
+    - a. Turn off EC2 instance (i.e node exporter or backend ec2 instance)
+    - b. Check alerts on `prometheus-server` instance
+
+    ```
+    <PUBLIC_URL_FOR_PROMETHEUS_SERVER>:9093/#/alerts
+    ```
+
+    - c. check email
 
 ## References
 

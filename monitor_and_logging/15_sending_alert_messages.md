@@ -74,7 +74,7 @@ sudo systemctl enable alertmanager
 sudo systemctl start alertmanager
 ```
 
-5. Generate App password from an email platform of choice
+5. Generate App password from an email platform of choice (if not done already)
     - a. Go to your account: https://myaccount.google.com
     - b. From the left menu select `Security`
     - c. Select the Signing in to Google panel select `App Passwords`
@@ -87,6 +87,7 @@ sudo systemctl start alertmanager
     - e. Create a new App password
     - f. Choose a custom name for the App password.
     - g. Save the App password in a safe place.
+    - h. Replace `auth_password` in step 2.
 
 6. Create a rule
     - a rule includes sending an alert if the instance is down for more than 3 minutes
@@ -131,12 +132,9 @@ alerting:
       - localhost:9093
 
 scrape_configs:
-  - job_name: 'node'
-    ec2_sd_configs:
-      - region: us-east-1
-        access_key: PUT_THE_ACCESS_KEY_HERE
-        secret_key: PUT_THE_SECRET_KEY_HERE
-        port: 9100
+  - job_name: 'udapeople'
+    static_configs:
+      - targets: ['<PUBLIC_URL_BACKEND_SERVER>:9100']
 ```
 
 9. Update Prometheus configuration file
@@ -154,6 +152,12 @@ sudo systemctl restart prometheus
     ```
 
     - c. check email
+
+    - d. Check Prometheus server on the following url:
+
+    ```
+    <PUBLIC_URL_FOR_PROMETHEUS_SERVER>:9090
+    ```
 
 ## References
 

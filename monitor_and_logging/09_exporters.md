@@ -106,6 +106,6 @@
 4. Check. if the prometheus server is running correctly
 
 ```
-<PUBLIC_URL_PROMETHEUS_SERVER>:9090/targets
+<PUBLIC_URL_PROMETHEUS_SERVER>:9090/targets 
 ```
 

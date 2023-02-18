@@ -56,5 +56,14 @@
 
 - Steps:
     1. **Cluster Configuration**
-    2. **Specify Networking**
+        - URL:
+            - https://console.aws.amazon.com/eks/home
+            - EKS service → Amazon EKS → Clusters → Create Cluster
+        - Name:
+            - myEKSCluster
+        - Version:
+            - Default (check version online)
+        - Cluster Service Role:
+            - myEKSClusterRole (IAM role generated from `Prerequisites` step)
+    2. **Specify Networking** 
     3. **Configure Logging**

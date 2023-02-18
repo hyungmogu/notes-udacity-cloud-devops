@@ -19,4 +19,9 @@ eksctl create cluster --name eksctl-demo --region=us-east-2 [--profile <profile-
 - More is found here: https://eksctl.io/usage/creating-and-managing-clusters/
 
 2. View progress
+- One way to view is via [Cloud Formation Console](https://us-east-2.console.aws.amazon.com/cloudformation/)
+- Another way is via CLI
+```
+eksctl utils describe-stacks --region=us-east-2 --cluster=eksctl-demo [--profile <profile-name>]
+```
 

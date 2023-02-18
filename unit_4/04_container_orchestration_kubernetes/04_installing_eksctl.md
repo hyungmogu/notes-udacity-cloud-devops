@@ -71,7 +71,22 @@ eksctl create cluster --name myCluster --nodes=4
 
 #### 2. Create an advanced cluster
 
+```
+eksctl create cluster --config-file=<path>
+```
+- Example is given [here](https://eksctl.io/)
+
 #### 3. List the details
+
+```
+eksctl get cluster [--name=<name>][--region=<region>]
+
+```
+- Lists details about existing cluster
 
 #### 4. Delete a cluster
 
+```
+eksctl delete cluster --name=<name> [--region=<region>]
+```
+- Deletes the cluster as well as all the associated resources

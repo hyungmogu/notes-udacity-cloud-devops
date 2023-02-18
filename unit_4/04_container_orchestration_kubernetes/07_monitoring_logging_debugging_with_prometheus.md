@@ -10,3 +10,5 @@
     - Who should get a page when an event is more significant than three standard deviants from the mean?
     - Should there be a backup person who gets alerted if the first person doesn’t respond within five minutes?
     - Should an alert wake up a team member at one standard deviation? What about two?
+
+#

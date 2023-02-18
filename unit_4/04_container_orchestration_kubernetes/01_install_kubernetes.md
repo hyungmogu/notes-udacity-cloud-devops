@@ -16,3 +16,4 @@ Linux
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 ```
 
+4. Verify if kubernetes is installed correctly by using `kubcectl` command

@@ -23,4 +23,3 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 echo "$(cat kubectl.sha256)  kubectl" | shasum -a 256 --check
 ```
 
-#

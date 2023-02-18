@@ -21,4 +21,15 @@
 
 2. Use use `kubectl describe pod {POD NAME}` to get more information about the pod
 
-#
+3. From the output of the above command, see `Events` header.
+    - This should give `Reason` and `Message` related to failure
+    - e.g. FailedScheduling
+
+### Solution
+
+1. `kubectl scale` if related to resource issue
+    - Provides necessary resources for the `Pending` pod
+
+## Debugging - Node Issues
+
+1. 

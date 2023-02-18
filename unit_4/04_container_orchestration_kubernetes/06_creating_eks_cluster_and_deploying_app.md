@@ -1,5 +1,9 @@
 # Creating EKS Cluster and Deploying App
 
+- The difference between `eksctl` and `kubectl` is that:
+    - `eksctl` is used to create/delete/edit a cluster
+    - `kubectl` is used to interact with the cluster
+
 ## Create an EKS Cluster using the EKSCTL utility
 
 1. Create Command
@@ -25,3 +29,15 @@ eksctl create cluster --name eksctl-demo --region=us-east-2 [--profile <profile-
 eksctl utils describe-stacks --region=us-east-2 --cluster=eksctl-demo [--profile <profile-name>]
 ```
 
+3. View Details
+- Details of newly created cluster can be observed by 
+    - Only valid after cloudformation status if `CREATE_COMPLETE`
+```
+eksctl get cluster --name=eksctl-demo --region=us-east-2 [--profile <profile-name>]
+```
+
+- Health of cluster nodes can be obtained by using
+
+```
+kubectl get nodes  [--profile <profile-name>]
+```

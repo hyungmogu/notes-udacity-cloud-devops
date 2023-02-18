@@ -66,4 +66,17 @@
         - Cluster Service Role:
             - myEKSClusterRole (IAM role generated from `Prerequisites` step)
     2. **Specify Networking** 
+        - Continues from step 1
+        - Under `Networking Tab` (Or can be cloudformation)
+            - Set `VPC`
+            - Set Subnets
+            - Set Security Group
+            - Set cluster endpoint to public
     3. **Configure Logging**
+        - Accept defaults
+        - Wait until cluster shows active state (on EKS)
+
+## Creating a Node Group
+1. Click `myEKSCluster` on EKS Cluster page
+2. Click Configuration → Compute → Add Node Group
+3. 

@@ -41,3 +41,4 @@ eksctl get cluster --name=eksctl-demo --region=us-east-2 [--profile <profile-nam
 ```
 kubectl get nodes  [--profile <profile-name>]
 ```
+#

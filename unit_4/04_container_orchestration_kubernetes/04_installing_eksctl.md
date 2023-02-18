@@ -75,3 +75,4 @@ eksctl create cluster --name myCluster --nodes=4
 
 #### 4. Delete a cluster
 
+#

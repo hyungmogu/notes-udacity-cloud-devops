@@ -30,3 +30,47 @@ brew --version
 brew tap weaveworks/tap
 brew install weaveworks/tap/eksctl
 ```
+
+- Add additional permission, when facing permission error
+
+```
+sudo chown -R $(whoami) /usr/local/<directory_name>
+```
+
+### Windows (Powershell)
+
+```
+# Install Chocolatey. Refer to the https://chocolatey.org/install  for detailed steps
+Set-ExecutionPolicy AllSigned 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# Exit and re-run Powershell as an Admin
+chocolatey install eksctl
+# Verify
+choco -?
+```
+
+### How it Works
+
+#### 1. Create a basic cluster
+
+```
+eksctl create cluster
+```
+
+- Creates with default parameters
+    1. An auto-generated name
+    2. Two m5.large worker nodes. Recall that the worker nodes are the virtual machines, and the m5.large type defines that each VM will have 2 vCPUs, 8 GiB memory, and up to 10 Gbps network bandwidth.
+    3. Use the [Linux AMIs](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) as the underlying machine image
+    4. Your default region
+    5. A dedicated VPC
+
+```
+eksctl create cluster --name myCluster --nodes=4
+```
+- Creates default Kubernetes cluster with some (here, `name` and `nodes`) customized
+
+#### 2. Create an advanced cluster
+
+#### 3. List the details
+
+#### 4. Delete a cluster

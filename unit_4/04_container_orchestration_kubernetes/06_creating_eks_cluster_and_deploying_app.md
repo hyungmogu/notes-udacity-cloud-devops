@@ -25,4 +25,3 @@ eksctl create cluster --name eksctl-demo --region=us-east-2 [--profile <profile-
 eksctl utils describe-stacks --region=us-east-2 --cluster=eksctl-demo [--profile <profile-name>]
 ```
 
-#

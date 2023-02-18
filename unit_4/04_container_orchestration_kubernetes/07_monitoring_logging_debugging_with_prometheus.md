@@ -11,4 +11,10 @@
     - Should there be a backup person who gets alerted if the first person doesn’t respond within five minutes?
     - Should an alert wake up a team member at one standard deviation? What about two?
 
-#
+## Prometheus
+
+1. To install prometheus, please refer to the following tutorial:
+    - Also included in `/unit_3/monitor_and_logging`
+    - https://codewizardly.com/prometheus-on-aws-ec2-part1/
+    - https://codewizardly.com/prometheus-on-aws-ec2-part2
+    - https://codewizardly.com/prometheus-on-aws-ec2-part4/

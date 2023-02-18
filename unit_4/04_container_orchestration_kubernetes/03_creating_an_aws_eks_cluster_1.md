@@ -79,5 +79,21 @@
 ## Creating a Node Group
 1. Click `myEKSCluster` on EKS Cluster page
 2. Click Configuration → Compute → Add Node Group
-3. 
+3. Configure node group
+    - Name:
+        - myNodeGroup
+    - Node IAM Role:
+        - myEKSWorkerNodeRole
+    - Node Group compute and scaling configuration 
+        - AMI Type: Amazon Linux 2 (AL2_x86_64)
+        - Capacity Type: On-Demand
+        - Instance Type: t3.micro
+        - Disk Size: 20 GiB
+        - Scaling Configuration
+            - Min size: 2
+            - Max size: 2
+            - Desired size: 2
+    - Node Group network configuration
+        - Choose subnets selected for `myEKSCluster`
+    - SSH Keypair
 

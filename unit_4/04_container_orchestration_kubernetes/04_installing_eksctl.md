@@ -13,6 +13,8 @@
 
 ## Installation Instruction
 
+- Are all found [here](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+
 ### Linux
 
 ```

@@ -37,6 +37,8 @@
 4. SSH Keypair
     - Purpose:
         - To log into EC2.
+    - Name:
+        - UdacityCapStoneKubernetes
     - How to generate SSH Keypair
         - https://console.aws.amazon.com/ec2/v2/home?
         - EC2 Service -> Network & Security -> Key Pairs
@@ -96,5 +98,4 @@
     - Node Group network configuration
         - Choose subnets selected for `myEKSCluster`
     - SSH Keypair
-
-#
+        - Select `UdacityCapStoneKubernetes`

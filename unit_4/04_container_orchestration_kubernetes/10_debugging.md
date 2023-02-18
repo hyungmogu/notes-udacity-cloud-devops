@@ -14,3 +14,10 @@
 
 <img src="https://user-images.githubusercontent.com/6856382/219900552-16cc078b-8e81-40cc-a5af-d0c47523c38a.png"/>
 
+## Debugging - Pod Issues
+
+1. Use `kubectl` get pods to check the names of your running pods
+    - Check for status like `Pending` instead of `Running`
+
+2. Use use `kubectl describe pod {POD NAME}` to get more information about the pod
+

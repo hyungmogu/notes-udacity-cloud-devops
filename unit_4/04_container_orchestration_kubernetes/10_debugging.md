@@ -42,4 +42,3 @@
 
 1. Use `kubectl get nodes` to check the names of the available nodes
 
-#

@@ -16,6 +16,8 @@
 
 ## Debugging - Pod Issues
 
+### Debugging Steps
+
 1. Use `kubectl` get pods to check the names of your running pods
     - Check for status like `Pending` instead of `Running`
 
@@ -25,13 +27,17 @@
     - This should give `Reason` and `Message` related to failure
     - e.g. FailedScheduling
 
-### Solution
+### Possible Solution
 
 1. `kubectl scale` if related to resource issue
     - Provides necessary resources for the `Pending` pod
 
 ## Debugging - Node Issues
 
-1. 
+- This is the case where Kubernetes app where pod is working, but behaves strangely.
 
+- Another case is where no pod will schedule onto a particular node
 
+### Debugging Steps
+
+1. Use `kubectl get nodes` to check the names of the available nodes

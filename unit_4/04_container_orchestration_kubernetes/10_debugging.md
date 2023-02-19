@@ -48,6 +48,3 @@
     - issue could be caused by a disconnection from the network
     - negative Event
     - too high of resource usage
-
-
-#

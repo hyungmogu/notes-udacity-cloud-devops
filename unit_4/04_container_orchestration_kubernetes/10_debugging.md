@@ -42,3 +42,9 @@
 
 1. Use `kubectl get nodes` to check the names of the available nodes
 
+2. Use `kubectl describe node {NODE NAME}` where NODE NAME is value under `Name` from step 1 to get more information about that node
+
+3. Results may vary
+    - issue could be caused by a disconnection from the network
+    - negative Event
+    - too high of resource usage

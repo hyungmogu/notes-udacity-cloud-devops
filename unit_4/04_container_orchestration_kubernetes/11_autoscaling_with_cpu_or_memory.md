@@ -1,8 +1,11 @@
 # Autoscaling with CPU or Memory
 
-1. One way the scale the app is via the following syntax
+## Horizontal Auto Scaler
+
+- is a killer feature of Kubernetes
+- is the ability to set-up auto-scaling
+    - auto-scaling is based on CPU utilization, memory, or custom metrics defined in the Kubernetes metric server 
 
 ```
 kubectl scale {deployment name} --replicas={desired number of replicas}
 ```
-#

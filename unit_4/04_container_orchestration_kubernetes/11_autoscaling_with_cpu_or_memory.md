@@ -21,3 +21,4 @@ newNumPods = ceil(currentNumPods * (currentMetric / desiredMetric))
 kubectl scale {deployment name} --replicas={desired number of replicas}
 ```
 
+#

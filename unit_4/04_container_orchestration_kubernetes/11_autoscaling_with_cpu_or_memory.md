@@ -5,5 +5,3 @@
 ```
 kubectl scale {deployment name} --replicas={desired number of replicas}
 ```
-
-#

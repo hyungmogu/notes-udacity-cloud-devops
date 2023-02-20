@@ -14,4 +14,3 @@
 2. Changes in Git trigger the CD server which then tests and deploys the code to a new environment
     - Environment is configured as Infrastructure as Code (IaC).
 
-#

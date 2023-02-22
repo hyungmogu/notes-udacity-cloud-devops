@@ -41,3 +41,4 @@
 
 IaC + GitOps (or devops) + load testing + logging --> more robust system
 
+#

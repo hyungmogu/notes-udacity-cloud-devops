@@ -18,3 +18,12 @@
 
 <img src="https://user-images.githubusercontent.com/6856382/220151742-dfac8915-e2c6-47ad-b5e4-e80ad5465ba3.png">
 
+## Items that could be alerted on with Kubernetes
+
+1. Alerting on application layer metrics
+2. Alerting on services running on Kubernetes
+3. Alerting on Kubernetes infrastructure
+4. Alerting on the host/node layer
+
+## How to collect metrics with Kubernetes and Prometheus?
+

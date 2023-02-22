@@ -1,4 +1,4 @@
-# Disaster Recovery
+# Disaster Recovery (Important)
 
 - Design for failure is important but often overlooked
 
@@ -22,4 +22,3 @@
 5. Security
 
 
-#

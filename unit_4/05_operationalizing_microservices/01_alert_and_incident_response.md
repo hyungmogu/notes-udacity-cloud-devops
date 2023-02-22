@@ -27,4 +27,9 @@
 
 ## How to collect metrics with Kubernetes and Prometheus?
 
-#
+- Using two pods
+    1. First pod is dedicated to the prometheus collector
+    2. Second pod has a "sidecar" prometheus container that sits alongside flask application
+
+<img src="https://user-images.githubusercontent.com/6856382/220535551-73bffc5e-bc0e-4e54-80b2-b8599331dda9.png" />
+

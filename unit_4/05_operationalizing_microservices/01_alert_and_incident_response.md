@@ -27,4 +27,3 @@
 
 ## How to collect metrics with Kubernetes and Prometheus?
 
-#

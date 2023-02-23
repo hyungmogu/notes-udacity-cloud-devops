@@ -2,4 +2,4 @@
 
 ## GitOps
 
-#
+1. Means using Git as a single source of truth
